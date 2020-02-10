@@ -1,11 +1,22 @@
+// Setting Color
 $succes: #2ecc71;
 $error: #e74c3c;
+$backgroundColor:#999;
+$primaryText: rgb(99, 82, 82);
+$formBackground:rgb(233, 232, 232);
+$boxShadow: 5px 2px 25px 6px black;
+$broderInput:#f0f0f0;
+$broderInputFocus:rgb(148, 143, 143);
+$btnColor:#70ff78e1;
+$btnBorder:#70ff78e1;
+
 
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 body{
   height: 100vh;
   width: 100vw;
@@ -17,23 +28,29 @@ body{
 
   font-family: Georgia, 'Times New Roman', Times, serif ;
 
-  background: #999;
-  color: rgb(99, 82, 82);
+  background: $backgroundColor;
+  color: $primaryText;
 }
 
 .container{
   max-width: 980px;
   margin: auto;  
 }
+
 .form{
   height: 100%;
   width: 100%;
 
   padding: 2rem;
-  background: rgb(233, 232, 232);
+  background: $formBackground;
 
-  box-shadow: 5px 2px 25px 6px black;
+  box-shadow:$boxShadow;
   
+  &--title{
+    margin-bottom: 1rem;
+    font-weight: 700;
+  }
+
 
   &__control{
     display: flex;
@@ -48,7 +65,7 @@ body{
 
   &__control input{
     padding: .3rem;
-    border: 2px solid #f0f0f0;
+    border: 2px solid $broderInput;
     border-radius: 4px;
     margin-bottom: .4rem;
 
@@ -56,7 +73,7 @@ body{
 
   &__control input:focus{
     outline: 0;
-    border-color: rgb(148, 143, 143);
+    border-color: $broderInputFocus;
   }
 
   &__control.success input{
@@ -68,8 +85,8 @@ body{
 
   &__submit{
     padding: .3rem 3rem;
-    border: 1px solid #f0f0f0;
-    background-color: #70ff78e1;
+    border: 1px solid $btnBorder;
+    background-color: $btnColor;
     color: #000;
     border-radius: 3px;
     margin-left: 18%;
