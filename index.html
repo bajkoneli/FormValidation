@@ -8,13 +8,34 @@
   <title>Form Validation</title>
 </head>
 <body>
-  <section class="form">
-    <div class="form__wraper">
-      <form action="index.html">
-        <h1>Milan bajic</h1>
+  
+    <div class="container">
+      <form id="form" class="form">
+        <h2>Register with Us!</h2>
+        <div class="form__control">
+          <label for="username">Username</label>
+          <input type="text" id="username" placeholder="Enter your Username...">
+          <small>Error Message</small>
+        </div>
+        <div class="form__control">
+          <label for="email">E-maiil</label>
+          <input type="text" id="email" placeholder="Enter your E-mail...">
+          <small>Error Message</small>
+        </div>
+        <div class="form__control">
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="Enter your Password...">
+          <small>Error Message</small>
+        </div>
+        <div class="form__control">
+          <label for="password2">Confirm Password</label>
+          <input type="password" id="password2" placeholder="Enter your Password...">
+          <small>Error Message</small>
+        </div>        
       </form>
+      <button id="submit" type="submit">Submit</button>
     </div>
-  </section>
+
   <script src="form-validation.js"></script>
 </body>
 </html>
