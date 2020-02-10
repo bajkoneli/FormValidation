@@ -1,0 +1,15 @@
+{
+  "name": "form-validation",
+  "version": "1.0.0",
+  "description": "\"Form Validation\"",
+  "main": "form-validation.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "form"
+  },
+  "author": "",
+  "license": "ISC"
+}
