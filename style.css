@@ -36,8 +36,8 @@ body {
   width: 100%;
   padding: 2rem;
   background: #e9e8e8;
-  -webkit-box-shadow: 10px 5px 5px black;
-          box-shadow: 10px 5px 5px black;
+  -webkit-box-shadow: 5px 2px 25px 6px black;
+          box-shadow: 5px 2px 25px 6px black;
 }
 
 .form__control {
@@ -75,7 +75,22 @@ body {
   border-color: #e74c3c;
 }
 
+.form__submit {
+  padding: .3rem 3rem;
+  border: 1px solid #f0f0f0;
+  background-color: #70ff78e1;
+  color: #000;
+  border-radius: 3px;
+  margin-left: 18%;
+}
+
 .form small {
+  visibility: hidden;
   font-size: .6em;
+  color: #e74c3c;
+}
+
+.form__control.error small {
+  visibility: visible;
 }
 /*# sourceMappingURL=style.css.map */
