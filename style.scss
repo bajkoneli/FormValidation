@@ -7,8 +7,9 @@ $formBackground:rgb(233, 232, 232);
 $boxShadow: 5px 2px 25px 6px black;
 $broderInput:#f0f0f0;
 $broderInputFocus:rgb(148, 143, 143);
-$btnColor:#70ff78e1;
-$btnBorder:#70ff78e1;
+$btnBackground:#3498db;
+$btnColor:#fff;
+$btnBorder:#3498db;
 
 
 *{
@@ -68,6 +69,7 @@ body{
     border: 2px solid $broderInput;
     border-radius: 4px;
     margin-bottom: .4rem;
+    width: 100%;
 
   }
 
@@ -86,8 +88,9 @@ body{
   &__submit{
     padding: .3rem 3rem;
     border: 1px solid $btnBorder;
-    background-color: $btnColor;
-    color: #000;
+    background-color: $btnBackground;
+
+    color: $btnColor;
     border-radius: 3px;
     margin-left: 18%;
 
