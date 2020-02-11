@@ -20,9 +20,13 @@ function showSuccess(input){
 }
 
 // Validation Email
-function isValid(email){
+function checkEmail(input){
     var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(String(email).toLowerCase());
+    if (re.test(input.value)) {
+        showSuccess(input)
+    }else{
+        showError(input, 'Email is not a valid');
+    }
 }
 
     // Loop of checkRequire
@@ -35,6 +39,7 @@ function checkRequired(inputArr){
         }        
     })
 }
+
 // Check Length
 function checkLength(input, min, max){
     if (input.value.length < min) {
@@ -45,6 +50,17 @@ function checkLength(input, min, max){
         showSuccess(input);
     }
 }
+
+// Check Password
+function checkPassword(input1, input2){
+    if(input1.value !== input2.value){
+        showError(input2 , 'Passwords do not match');
+    }else{
+        showSuccess(input);
+    }
+
+}
+
 
 function getFieldName(input){
     return input.id.charAt(0).toUpperCase() + input.id.slice(1);
@@ -58,6 +74,8 @@ form.addEventListener('submit', function(e){
     checkRequired([username, email, password, password2]);
     checkLength(username, 3, 15);
     checkLength(password, 6, 25);
+    checkEmail(email);
+    checkPassword(password,password2);
     // Duza verzija
 
     // if(username.value === ''){
